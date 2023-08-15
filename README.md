@@ -7,6 +7,7 @@ The FahiPay Payment Gateway Client is a PHP library that provides an interface t
 - Create transactions with ease using the API provided by FahiPay.
 - Query specific transactions by transaction ID.
 - Automatically calculates and generates the required digital signature.
+- Validate signature in response.
 
 ## Installation
 
@@ -65,4 +66,17 @@ print_r($queryResponse);
   }
 }
 */
+```
+
+### Validating signature
+To validate signature received from FahiPay, provide signature, transactionId, success (status) and approvalCode received from FahiPay, to the `validateSignature` method. Here's an example:
+
+```php
+$success          = $_GET['Success'];
+$transactionId    = $_GET['ShoppingCartID'];
+$approvalCode     = $_GET['ApprovalCode'];
+$signature        = $_GET['Signature'];
+$isValidSignature = $apiClient->validateSignature($success,$transactionId,$approvalCode,$signature);
+
+print_r($isValidSignature); //returns true or false
 ```
