@@ -22,7 +22,7 @@ class Gateway {
         return base64_encode(sha1($dataToHash, true));
     }
 
-    public function validateSignature($signature,$transactionId,$success,$approvalCode)
+    public function validateSignature($success,$transactionId,$approvalCode,$signature)
     { 
         $sig = base64_encode(sha1($this->merchantId.$this->secretKey.$transactionId.$this->secretKey.$success.$this->secretKey.$approvalCode.$this->secretKey, true));
         return ($sig==$signature);
