@@ -29,16 +29,15 @@ $returnErrorUrl = 'https://example.com/error';
 $cancelUrl      = 'https://example.com/cancel';
 
 $apiClient = new \FahiPay\Gateway($merchantId, $secretKey, $returnUrl, $returnErrorUrl, $cancelUrl);
-$response = $apiClient->createTransaction('unique_transaction_id', 19); // Amount in MVR
+$response = $apiClient->createTransaction('TXN001', 10.03); // Unique transaction id, Amount in MVR (2dp)
 print_r($response);
 ```
 ### Querying a Specific Transaction
 To query a specific transaction, provide the transaction ID to the `getTransaction` method. Here's an example:
 
 ```php
-$transactionIdToQuery = 'ABCD1234'; // Replace with the actual transaction ID
-
-$queryResponse = $apiClient->getTransaction($transactionIdToQuery);
+$transactionId = 'TXN001'; // Replace with the actual transaction ID
+$queryResponse = $apiClient->getTransaction($transactionId);
 
 print_r($queryResponse);
 ```
