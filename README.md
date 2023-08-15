@@ -31,6 +31,13 @@ $cancelUrl      = 'https://example.com/cancel';
 $apiClient      = new FahiPay\Gateway($merchantId, $secretKey, $returnUrl, $returnErrorUrl, $cancelUrl);
 $response       = $apiClient->createTransaction('TXN001', 10.03); // Unique transaction id, Amount in MVR (2dp)
 print_r($response);
+/*
+{
+  "type": "success",
+  "link": "https://fahipay.mv/pay/L2XXXXXXXXXXXXXXXXXX"
+}
+*/
+
 ```
 ### Querying a Specific Transaction
 To query a specific transaction, provide the transaction ID to the `getTransaction` method. Here's an example:
@@ -40,4 +47,20 @@ $transactionId = 'TXN001'; // Replace with the actual transaction ID
 $queryResponse = $apiClient->getTransaction($transactionId);
 
 print_r($queryResponse);
+/*
+{
+  "type": "success",
+  "data": {
+    "time": "2023-08-15 21:29:05",
+    "method": "gateway",
+    "mref": "TXN006",
+    "amount": "10.04",
+    "fee": "0.00",
+    "link": "https://fahipay.mv/pay/L2XXXXXXXXXXXXXXXXXX",
+    "extras": null,
+    "status": null,
+    "ApprovalCode": null
+  }
+}
+*/
 ```
