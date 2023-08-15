@@ -24,7 +24,7 @@ class Gateway {
     
     public function createTransaction($transactionId, $totalAmount)
     {
-        $totalAmount         = round($totalAmount * 10,0);
+        $totalAmount         = round($totalAmount * 100,0);
         $signature           = $this->generateSignature($transactionId, $totalAmount);
         $postData = [
             'ShopID'         => $this->merchantId,
