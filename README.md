@@ -19,7 +19,9 @@ composer require fahipay/gateway
 
 ### Creating a Transaction
 
-To create a transaction, initialize the FPG client with your FahiPay credentials and URLs, and then call the `createTransaction` method. Here's an example:
+To create a transaction, initialize the FPG (FahiPay Payment Gateway) client with your FahiPay credentials and URLs, and then call the `createTransaction` method. You can obtain credentials from [https://fahipay.mv/merchants/portal/](https://fahipay.mv/merchants/portal/)
+
+Here's an example:
 
 ```php
 $merchantId     = 'your_merchant_id';
