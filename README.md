@@ -28,8 +28,8 @@ $returnUrl      = 'https://example.com/success';
 $returnErrorUrl = 'https://example.com/error';
 $cancelUrl      = 'https://example.com/cancel';
 
-$apiClient = new \FahiPay\Gateway($merchantId, $secretKey, $returnUrl, $returnErrorUrl, $cancelUrl);
-$response = $apiClient->createTransaction('TXN001', 10.03); // Unique transaction id, Amount in MVR (2dp)
+$apiClient      = new \FahiPay\Gateway($merchantId, $secretKey, $returnUrl, $returnErrorUrl, $cancelUrl);
+$response       = $apiClient->createTransaction('TXN001', 10.03); // Unique transaction id, Amount in MVR (2dp)
 print_r($response);
 ```
 ### Querying a Specific Transaction
