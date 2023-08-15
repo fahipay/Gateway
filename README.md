@@ -53,8 +53,8 @@ print_r($queryResponse);
   "data": {
     "time": "2023-08-15 21:29:05",
     "method": "gateway",
-    "mref": "TXN006",
-    "amount": "10.04",
+    "mref": "TXN001",
+    "amount": "10.03",
     "fee": "0.00",
     "link": "https://fahipay.mv/pay/L2XXXXXXXXXXXXXXXXXX",
     "extras": null,
