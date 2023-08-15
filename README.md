@@ -1,4 +1,4 @@
-# FahiPay Gateway Client
+# FahiPay Payment Gateway Client
 
 The FahiPay Payment Gateway Client is a PHP library that provides an interface to interact with the FahiPay payment gateway API. It allows you to easily create transactions and query specific transactions using the API provided by FahiPay.
 
