@@ -21,6 +21,12 @@ class Gateway {
         $dataToHash = $this->merchantId . $this->secretKey . $shoppingCartId . $this->secretKey . $totalAmount . $this->secretKey;
         return base64_encode(sha1($dataToHash, true));
     }
+
+    public function validateSignature($signature,$transactionId,$success,$approvalCode)
+    { 
+        $sig = base64_encode(sha1($this->merchantId.$this->secretKey.$transactionId.$this->secretKey.$success.$this->secretKey.$approvalCode.$this->secretKey, true));
+        return ($sig==$signature);
+    }
     
     public function createTransaction($transactionId, $totalAmount)
     {
