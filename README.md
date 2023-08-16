@@ -58,7 +58,7 @@ print_r($queryResponse);
     "method": "gateway",
     "mref": "TXN001",
     "amount": 10.03,
-    "fee": -0.1,
+    "fee": 0.0,
     "link": "https://fahipay.mv/pay/L2XXXXXXXXXXXXXXXXXX",
     "extras": null,
     "status": "pending",
