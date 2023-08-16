@@ -1,7 +1,7 @@
 <?php
 namespace FahiPay;
 class Gateway {
-    private $shopId;
+    private $merchantId;
     private $secretKey;
     private $returnUrl;
     private $returnErrorUrl;
