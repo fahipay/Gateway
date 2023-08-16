@@ -61,7 +61,7 @@ print_r($queryResponse);
     "fee": "0.00",
     "link": "https://fahipay.mv/pay/L2XXXXXXXXXXXXXXXXXX",
     "extras": null,
-    "status": null,
+    "status": "pending",
     "ApprovalCode": null
   }
 }
