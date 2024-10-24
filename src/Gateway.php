@@ -28,6 +28,7 @@ class Gateway {
         return ($sig==$signature);
     }
     
+    //Create payment link
     public function createTransaction($transactionId, $totalAmount)
     {
         $totalAmount         = round($totalAmount * 100,0);
